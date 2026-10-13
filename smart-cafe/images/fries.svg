@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#FFF6EB"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="255" rx="100" ry="18" fill="#E8DED6"/>
+  <!-- Golden Fries Sticking Out -->
+  <g fill="#F59E0B" stroke="#D97706" stroke-width="2">
+    <rect x="150" y="80" width="16" height="110" rx="3" transform="rotate(-15 150 80)"/>
+    <rect x="175" y="70" width="16" height="120" rx="3" transform="rotate(-5 175 70)"/>
+    <rect x="205" y="65" width="16" height="125" rx="3" transform="rotate(5 205 65)"/>
+    <rect x="230" y="75" width="16" height="115" rx="3" transform="rotate(18 230 75)"/>
+    <rect x="135" y="105" width="16" height="85" rx="3" transform="rotate(-25 135 105)"/>
+    <rect x="245" y="100" width="16" height="90" rx="3" transform="rotate(28 245 100)"/>
+    <rect x="185" y="90" width="16" height="100" rx="3" transform="rotate(2 185 90)"/>
+  </g>
+  <!-- Red Fry Box Container -->
+  <path d="M 130 160 L 145 250 L 255 250 L 270 160 Q 200 175 130 160 Z" fill="#EF4444"/>
+  <!-- Curved Box Front Cutout -->
+  <path d="M 130 160 Q 200 200 270 160 L 255 250 L 145 250 Z" fill="#DC2626"/>
+  <!-- Gold Accent on Box -->
+  <circle cx="200" cy="210" r="20" fill="#FBBF24"/>
+  <path d="M 192 200 L 192 220 M 192 200 C 196 195 204 195 208 200 L 208 220" stroke="#DC2626" stroke-width="4" fill="none"/>
+  <text x="200" y="285" font-family="sans-serif" font-weight="bold" font-size="16" fill="#6F4E37" text-anchor="middle">Crispy Peri Peri Fries</text>
+</svg>

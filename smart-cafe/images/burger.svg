@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#FFF6EB"/>
+  <!-- Plate Shadow -->
+  <ellipse cx="200" cy="245" rx="140" ry="25" fill="#E8DED6"/>
+  <!-- Plate -->
+  <ellipse cx="200" cy="240" rx="130" ry="20" fill="#FFFFFF" stroke="#E8DED6" stroke-width="4"/>
+  <!-- Bottom Bun -->
+  <path d="M 100 215 C 100 230 300 230 300 215 L 300 195 L 100 195 Z" fill="#D97706" rx="10"/>
+  <!-- Sauce / Mayo -->
+  <path d="M 105 195 Q 150 205 200 195 Q 250 205 295 195" fill="none" stroke="#FEF3C7" stroke-width="6"/>
+  <!-- Veg Patty -->
+  <rect x="90" y="170" width="220" height="25" rx="12" fill="#5D3E2F"/>
+  <!-- Cheese Melt -->
+  <path d="M 85 170 L 315 170 L 290 190 L 260 170 L 220 195 L 190 170 L 150 195 L 120 170 L 95 185 Z" fill="#FBBF24"/>
+  <!-- Lettuce Ruffles -->
+  <path d="M 80 155 Q 100 145 120 155 Q 140 165 160 155 Q 180 145 200 155 Q 220 165 240 155 Q 260 145 280 155 Q 300 165 320 155 L 310 170 L 90 170 Z" fill="#4ADE80"/>
+  <!-- Tomato Slices -->
+  <rect x="105" y="140" width="90" height="15" rx="6" fill="#EF4444"/>
+  <rect x="205" y="140" width="90" height="15" rx="6" fill="#EF4444"/>
+  <!-- Top Bun -->
+  <path d="M 90 140 C 90 60 310 60 310 140 Z" fill="#F59E0B"/>
+  <!-- Sesame Seeds -->
+  <ellipse cx="160" cy="95" rx="4" ry="2" fill="#FFFFFF" transform="rotate(-15 160 95)"/>
+  <ellipse cx="200" cy="85" rx="4" ry="2" fill="#FFFFFF"/>
+  <ellipse cx="240" cy="95" rx="4" ry="2" fill="#FFFFFF" transform="rotate(20 240 95)"/>
+  <ellipse cx="140" cy="115" rx="4" ry="2" fill="#FFFFFF" transform="rotate(30 140 115)"/>
+  <ellipse cx="180" cy="110" rx="4" ry="2" fill="#FFFFFF" transform="rotate(-10 180 110)"/>
+  <ellipse cx="220" cy="110" rx="4" ry="2" fill="#FFFFFF" transform="rotate(15 220 110)"/>
+  <ellipse cx="260" cy="115" rx="4" ry="2" fill="#FFFFFF" transform="rotate(-25 260 115)"/>
+  <text x="200" y="280" font-family="sans-serif" font-weight="bold" font-size="16" fill="#6F4E37" text-anchor="middle">Artisan Gourmet Burger</text>
+</svg>

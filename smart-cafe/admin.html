@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard – Smart Café Control Panel</title>
+  <meta name="description" content="Café manager dashboard for live order tracking, sales analytics, and menu management.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">☕</div>
+        <div class="brand-text">
+          <span class="brand-title">SMART <span>CAFÉ</span></span>
+          <span class="brand-subtitle">Digi-Menu & Billing</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li>
+          <a href="cart.html" class="nav-link">
+            🛒 Cart <span class="cart-nav-badge">0</span>
+          </a>
+        </li>
+        <li><a href="orders.html" class="nav-link">Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="about.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-nav-pill active">🔐 Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="padding: 2.5rem 0 5rem;">
+    <div class="container">
+      
+      <!-- VIEW 1: Admin Login View (Shown if not authenticated) -->
+      <div id="admin-login-view" style="display: none; max-width: 440px; margin: 3rem auto;">
+        <div class="form-card" style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: var(--bg-warm-tint); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.25rem;">
+            🔐
+          </div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary-dark); margin-bottom: 0.5rem;">
+            Admin Authentication
+          </h2>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.75rem;">
+            Enter the café manager authorization PIN to access real-time KPIs, kitchen workflows, and menu controls.
+          </p>
+
+          <form id="admin-login-form">
+            <div class="form-group" style="text-align: left;">
+              <label for="admin-password-input" class="form-label">Manager Passcode</label>
+              <input type="password" 
+                     id="admin-password-input" 
+                     class="form-control" 
+                     placeholder="Enter PIN (Default: admin123)" 
+                     required 
+                     autofocus>
+              <div style="font-size: 0.78rem; color: var(--accent-gold); margin-top: 0.35rem; font-weight: 600;">
+                💡 Viva Demo Hint: Default passcode is <strong>admin123</strong>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+              Unlock Admin Portal →
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- VIEW 2: Admin Dashboard View (Shown when authenticated) -->
+      <div id="admin-dashboard-view" style="display: none;">
+        
+        <!-- Dashboard Topbar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-tag">Management Console</span>
+            <h1 class="section-title" style="margin-bottom: 0.25rem;">Café Admin Dashboard</h1>
+            <p class="section-desc">Real-time terminal statistics, live kitchen order pipeline, and catalog control.</p>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <a href="menu.html" target="_blank" class="btn btn-secondary btn-sm" title="View Customer Screen in New Tab">
+              👁️ Open Kiosk View
+            </a>
+            <button type="button" class="btn btn-danger btn-sm" onclick="handleAdminLogout()">
+              🚪 Logout
+            </button>
+          </div>
+        </div>
+
+        <!-- KPI Summary Cards (Today's Statistics) -->
+        <div class="admin-stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon orders">📋</div>
+            <div>
+              <div class="stat-val" id="stat-total-orders">0</div>
+              <div class="stat-title">Total Orders</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon sales">💰</div>
+            <div>
+              <div class="stat-val" id="stat-total-sales">₹0.00</div>
+              <div class="stat-title">Total Revenue</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon items">🍔</div>
+            <div>
+              <div class="stat-val" id="stat-items-sold">0</div>
+              <div class="stat-title">Items Sold</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon pending">⏳</div>
+            <div>
+              <div class="stat-val" id="stat-pending-orders" style="color: var(--status-warning);">0</div>
+              <div class="stat-title">Active Orders</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admin Tabs Navigation -->
+        <div class="admin-tabs-nav">
+          <button type="button" 
+                  class="admin-tab-btn active" 
+                  data-tab="orders" 
+                  onclick="switchAdminTab('orders')">
+            📦 Live Kitchen Orders
+          </button>
+          <button type="button" 
+                  class="admin-tab-btn" 
+                  data-tab="menu" 
+                  onclick="switchAdminTab('menu')">
+            🍽️ Menu & Stock Management
+          </button>
+        </div>
+
+        <!-- Admin Active Tab Content Container -->
+        <div id="admin-tab-content">
+          <!-- Populated by admin.js -->
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom" style="padding-top: 1rem; border-top: none;">
+      <p>© 2026 Smart Café – Administrative Portal | Secure LocalStorage Management</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

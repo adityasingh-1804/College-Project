@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History & Tracking – Smart Café</title>
+  <meta name="description" content="Track live order status and browse your complete order history.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">☕</div>
+        <div class="brand-text">
+          <span class="brand-title">SMART <span>CAFÉ</span></span>
+          <span class="brand-subtitle">Digi-Menu & Billing</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li>
+          <a href="cart.html" class="nav-link">
+            🛒 Cart <span class="cart-nav-badge">0</span>
+          </a>
+        </li>
+        <li><a href="orders.html" class="nav-link active">Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="about.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-nav-pill">🔐 Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="padding: 2.5rem 0 5rem;">
+    <div class="container">
+      
+      <!-- Orders Header -->
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Kitchen Status & Receipts</span>
+        <h1 class="section-title">Order Tracking & History</h1>
+        <p class="section-desc">
+          Monitor your dish preparation in the kitchen in real-time or view invoices from your past visits.
+        </p>
+      </div>
+
+      <!-- Main Orders Container (populated dynamically by orders.js) -->
+      <div id="orders-page-container">
+        <!-- Content rendered via js/orders.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>SMART <span>CAFÉ</span></h3>
+        <p class="footer-desc">
+          Real-time order tracking and local storage receipt system.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Order Workflow</h4>
+        <ul class="footer-links">
+          <li>1. Order Received 📝</li>
+          <li>2. Café Accepted 👍</li>
+          <li>3. Kitchen Prep 👨‍🍳</li>
+          <li>4. Ready for Table 🛎️</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Need Assistance?</h4>
+        <p style="color: #D1C7BD; font-size: 0.9rem;">Show your Order ID to the café server or cashier desk.</p>
+        <p style="color: var(--accent-gold); font-size: 0.9rem; font-weight: 700; margin-top: 0.5rem;">Help Desk: +91 98765 43210</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Terminal Info</h4>
+        <p style="color: #8D817B; font-size: 0.85rem;">Browser LocalStorage Engine</p>
+        <p style="color: #8D817B; font-size: 0.85rem;">Client-side State Sync</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Smart Café – Digi-Menu & Auto Billing Machine</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+</html>

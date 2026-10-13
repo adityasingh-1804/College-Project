@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#FFF6EB"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="235" rx="140" ry="25" fill="#E8DED6"/>
+  <!-- Wooden Board / Pan -->
+  <ellipse cx="200" cy="230" rx="135" ry="30" fill="#8B5E3C"/>
+  <ellipse cx="200" cy="225" rx="130" ry="28" fill="#A47148"/>
+  <!-- Pizza Base Crust -->
+  <ellipse cx="200" cy="180" rx="115" ry="75" fill="#D97706"/>
+  <!-- Cheese Fill -->
+  <ellipse cx="200" cy="180" rx="100" ry="65" fill="#FBBF24"/>
+  <!-- Red Tomato Sauce Highlights -->
+  <ellipse cx="170" cy="160" rx="15" ry="8" fill="#EF4444" opacity="0.6"/>
+  <ellipse cx="230" cy="190" rx="18" ry="10" fill="#EF4444" opacity="0.6"/>
+  <ellipse cx="190" cy="210" rx="14" ry="7" fill="#EF4444" opacity="0.6"/>
+  <!-- Toppings: Paneer Cubes & Olives -->
+  <rect x="150" y="145" width="16" height="12" rx="2" fill="#FFFFFF"/>
+  <rect x="220" y="150" width="16" height="12" rx="2" fill="#FFFFFF"/>
+  <rect x="185" y="175" width="16" height="12" rx="2" fill="#FFFFFF"/>
+  <rect x="140" y="190" width="16" height="12" rx="2" fill="#FFFFFF"/>
+  <rect x="235" y="185" width="16" height="12" rx="2" fill="#FFFFFF"/>
+  <!-- Basil Leaves -->
+  <ellipse cx="175" cy="190" rx="9" ry="5" fill="#22C55E" transform="rotate(35 175 190)"/>
+  <ellipse cx="210" cy="165" rx="9" ry="5" fill="#22C55E" transform="rotate(-20 210 165)"/>
+  <!-- Olives -->
+  <circle cx="165" cy="175" r="5" fill="#1F2937"/>
+  <circle cx="165" cy="175" r="2" fill="#FBBF24"/>
+  <circle cx="215" cy="205" r="5" fill="#1F2937"/>
+  <circle cx="215" cy="205" r="2" fill="#FBBF24"/>
+  <text x="200" y="280" font-family="sans-serif" font-weight="bold" font-size="16" fill="#6F4E37" text-anchor="middle">Stone-Baked Pizza</text>
+</svg>

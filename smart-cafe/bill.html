@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Invoice – Smart Café</title>
+  <meta name="description" content="Official digital tax invoice and receipt for your Smart Café order.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar (Hidden during printing) -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">☕</div>
+        <div class="brand-text">
+          <span class="brand-title">SMART <span>CAFÉ</span></span>
+          <span class="brand-subtitle">Digi-Menu & Billing</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li>
+          <a href="cart.html" class="nav-link">
+            🛒 Cart <span class="cart-nav-badge">0</span>
+          </a>
+        </li>
+        <li><a href="orders.html" class="nav-link">Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="about.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-nav-pill">🔐 Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="padding: 2rem 0 4rem;">
+    <div class="container">
+      
+      <!-- Container populated dynamically by bill.js -->
+      <div id="bill-content-container">
+        <!-- Digital Invoice Rendered Here -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer (Hidden during printing) -->
+  <footer class="site-footer">
+    <div class="container footer-bottom" style="padding-top: 1rem; border-top: none;">
+      <p>© 2026 Smart Café – Digi-Menu & Auto Billing Machine | Tax Compliance</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/bill.js"></script>
+</body>
+</html>

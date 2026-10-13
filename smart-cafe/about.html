@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Contact – Smart Café</title>
+  <meta name="description" content="Learn about the Smart Café project, system architecture, advantages, and contact details.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">☕</div>
+        <div class="brand-text">
+          <span class="brand-title">SMART <span>CAFÉ</span></span>
+          <span class="brand-subtitle">Digi-Menu & Billing</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li>
+          <a href="cart.html" class="nav-link">
+            🛒 Cart <span class="cart-nav-badge">0</span>
+          </a>
+        </li>
+        <li><a href="orders.html" class="nav-link">Orders</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-nav-pill">🔐 Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="padding: 3rem 0 5rem;">
+    <div class="container">
+      
+      <!-- About Hero -->
+      <div class="section-header">
+        <span class="section-tag">Project Overview</span>
+        <h1 class="section-title">About Smart Café</h1>
+        <p class="section-desc">
+          “Smart Café is a digital self-service café management system designed to make food ordering faster, easier, and more efficient.”
+        </p>
+      </div>
+
+      <!-- Problem Statement & Solution Comparison Table -->
+      <div style="background: var(--bg-card); border-radius: var(--radius-lg); padding: 2.5rem; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm); margin-bottom: 3.5rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary-dark); margin-bottom: 0.75rem;">
+          Traditional System vs. Smart Café System
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+          How digitizing the café counter eliminates wait times and human calculation errors:
+        </p>
+
+        <div style="overflow-x: auto;">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Workflow Parameter</th>
+                <th style="width: 37.5%; color: var(--status-danger);">Traditional Café System ❌</th>
+                <th style="width: 37.5%; color: var(--status-success);">Smart Café Kiosk System ✓</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Menu Browsing</strong></td>
+                <td>Customer waits for waiter to bring a physical paper menu, which may be soiled or outdated.</td>
+                <td>Instant digital interactive menu with real-time dish availability and instant category search.</td>
+              </tr>
+              <tr>
+                <td><strong>Order Taking</strong></td>
+                <td>Waiter writes handwritten notes; potential handwriting misinterpretation.</td>
+                <td>Direct customer selection with clear quantity selectors and custom preference options.</td>
+              </tr>
+              <tr>
+                <td><strong>Bill Calculation</strong></td>
+                <td>Manual calculation by cashier; prone to arithmetic errors and manual discount oversights.</td>
+                <td>100% automated dynamic computation with exact 5% GST and conditional discount rules.</td>
+              </tr>
+              <tr>
+                <td><strong>Invoice & Receipt</strong></td>
+                <td>Handwritten receipt or manual POS entry requiring significant queue time.</td>
+                <td>Instant printable digital tax invoice with unique sequential Order ID (SC1001+) and barcode.</td>
+              </tr>
+              <tr>
+                <td><strong>Kitchen Pipeline</strong></td>
+                <td>Verbal communication or paper slips lost in kitchen bustle.</td>
+                <td>Live administrative order queue with multi-stage status progression tracking.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Key Advantages Grid -->
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Key Highlights</span>
+        <h2 class="section-title">System Advantages</h2>
+      </div>
+
+      <div class="steps-grid" style="margin-bottom: 4rem;">
+        <div class="step-card">
+          <div class="step-icon">⚡</div>
+          <h3 class="step-title">Faster Ordering</h3>
+          <p class="step-desc">Eliminates long waiting lines at café counters through responsive self-service kiosks.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">🧮</div>
+          <h3 class="step-title">Zero Math Errors</h3>
+          <p class="step-desc">Automated dynamic mathematical formulas compute exact 5% GST and conditional discounts.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">📲</div>
+          <h3 class="step-title">Digital Invoice</h3>
+          <p class="step-desc">Paperless digital tax invoice with full itemized breakdown and one-click browser print.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon">📦</div>
+          <h3 class="step-title">Kitchen Tracking</h3>
+          <p class="step-desc">Customers track live progress from "Accepted" to "Ready for Table Pickup".</p>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div id="contact" style="background: var(--bg-card); border-radius: var(--radius-lg); padding: 3rem 2rem; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <span class="section-tag">Reach Out</span>
+          <h2 class="section-title">Contact Smart Café</h2>
+          <p class="section-desc">Visit our campus kiosk or reach out for inquiries and demonstrations.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; text-align: center;">
+          <div style="padding: 1.5rem; background: var(--bg-warm-tint); border-radius: var(--radius-md);">
+            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📍</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary-dark);">Address</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Smart Café Campus Kiosk<br>Ghaziabad, Uttar Pradesh, India
+            </p>
+          </div>
+
+          <div style="padding: 1.5rem; background: var(--bg-warm-tint); border-radius: var(--radius-md);">
+            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📞</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary-dark);">Phone</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              +91 98765 43210<br>+91 120 456 7890
+            </p>
+          </div>
+
+          <div style="padding: 1.5rem; background: var(--bg-warm-tint); border-radius: var(--radius-md);">
+            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">✉️</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary-dark);">Email</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              smartcafe@example.com<br>support@smartcafe.edu
+            </p>
+          </div>
+
+          <div style="padding: 1.5rem; background: var(--bg-warm-tint); border-radius: var(--radius-md);">
+            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🕒</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary-dark);">Operating Hours</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Monday – Sunday<br><strong>10:00 AM – 10:00 PM</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom" style="padding-top: 1rem; border-top: none;">
+      <p>© 2026 Smart Café – Digi-Menu & Auto Billing Machine | College Mini Project System</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

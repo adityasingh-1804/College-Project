@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart – Smart Café</title>
+  <meta name="description" content="Review your selected dishes and view dynamic bill calculations.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">☕</div>
+        <div class="brand-text">
+          <span class="brand-title">SMART <span>CAFÉ</span></span>
+          <span class="brand-subtitle">Digi-Menu & Billing</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li>
+          <a href="cart.html" class="nav-link active">
+            🛒 Cart <span class="cart-nav-badge">0</span>
+          </a>
+        </li>
+        <li><a href="orders.html" class="nav-link">Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="about.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-nav-pill">🔐 Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="padding: 2.5rem 0 5rem;">
+    <div class="container">
+      
+      <!-- Cart Header -->
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Self-Service Checkout</span>
+        <h1 class="section-title">Your Shopping Cart</h1>
+        <p class="section-desc">
+          Review your selected items, adjust portions, and view automatic tax & discount computations.
+        </p>
+      </div>
+
+      <!-- Main Cart Container (populated dynamically by cart.js) -->
+      <div id="cart-container">
+        <!-- Content rendered via js/cart.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>SMART <span>CAFÉ</span></h3>
+        <p class="footer-desc">
+          Automated café management and digital billing machine for college project demonstration.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Digital Menu</a></li>
+          <li><a href="cart.html">View Cart</a></li>
+          <li><a href="orders.html">Order Tracker</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tax Compliance</h4>
+        <p style="color: #D1C7BD; font-size: 0.9rem;">CGST: 2.5%</p>
+        <p style="color: #D1C7BD; font-size: 0.9rem;">SGST: 2.5%</p>
+        <p style="color: var(--accent-gold); font-size: 0.9rem; font-weight: 700; margin-top: 0.4rem;">Total GST: 5.0%</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Offers</h4>
+        <p style="color: #D1C7BD; font-size: 0.9rem;">Flat 10% Discount</p>
+        <p style="color: #8D817B; font-size: 0.8rem;">Auto-applied on subtotal ₹500+</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Smart Café – Digi-Menu & Auto Billing Machine</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

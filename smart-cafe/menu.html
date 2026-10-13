@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Menu – Smart Café Kiosk</title>
+  <meta name="description" content="Browse our complete 24-item digital menu with live search and category filtering.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">☕</div>
+        <div class="brand-text">
+          <span class="brand-title">SMART <span>CAFÉ</span></span>
+          <span class="brand-subtitle">Digi-Menu & Billing</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li>
+          <a href="cart.html" class="nav-link">
+            🛒 Cart <span class="cart-nav-badge">0</span>
+          </a>
+        </li>
+        <li><a href="orders.html" class="nav-link">Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="about.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="admin.html" class="nav-link admin-nav-pill">🔐 Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="padding: 2.5rem 0 5rem;">
+    <div class="container">
+      
+      <!-- Menu Header -->
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Self-Service Digi-Menu</span>
+        <h1 class="section-title">Select Your Delicious Meal</h1>
+        <p class="section-desc">
+          Browse through beverages, burgers, pizzas, pastas, and desserts. Order items directly to your cart.
+        </p>
+      </div>
+
+      <!-- Controls: Search & Category Filter -->
+      <div class="menu-controls">
+        <!-- Live Search Bar -->
+        <div class="search-box-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" 
+                 id="menu-search-input" 
+                 class="search-input" 
+                 placeholder="Search food or drinks (e.g., Pizza, Cappuccino, Burger, Pasta)..."
+                 autocomplete="off">
+        </div>
+
+        <!-- Category Pill Buttons -->
+        <div id="category-filter-container" class="category-filter-list">
+          <!-- Populated dynamically via menu.js -->
+        </div>
+
+        <!-- Count Indicator -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0.25rem;">
+          <span id="visible-count-display" style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">
+            Showing items...
+          </span>
+          <span style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 700;">
+            🏷️ 10% Discount on orders ₹500 and above!
+          </span>
+        </div>
+      </div>
+
+      <!-- Food Items Grid -->
+      <div id="menu-items-grid" class="menu-grid">
+        <!-- Food cards injected dynamically by js/menu.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Floating Kiosk Quick-Cart Bar (appears when items are in cart) -->
+  <div id="floating-kiosk-cart" class="floating-cart-bar hidden">
+    <div>
+      <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); font-weight: 700;">Your Selection</div>
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="floating-cart-count" style="font-weight: 700;">0 items</span>
+        <span>•</span>
+        <span class="floating-cart-total" style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF;">₹0.00</span>
+      </div>
+    </div>
+    <a href="cart.html" class="btn btn-accent btn-sm" style="padding: 0.55rem 1.25rem;">
+      View Cart & Checkout →
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>SMART <span>CAFÉ</span></h3>
+        <p class="footer-desc">
+          High-performance digital ordering machine designed for automated self-service and billing.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Digital Menu</a></li>
+          <li><a href="cart.html">View Cart</a></li>
+          <li><a href="orders.html">Order Tracker</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Café Special</h4>
+        <ul class="footer-links">
+          <li><a href="menu.html">☕ Artisan Beverages</a></li>
+          <li><a href="menu.html">🍔 Gourmet Fast Food</a></li>
+          <li><a href="menu.html">🍕 Wood-fired Pizza</a></li>
+          <li><a href="menu.html">🍰 Delectable Desserts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Service Desk</h4>
+        <p style="color: #D1C7BD; font-size: 0.9rem;">Self-Service Kiosk Mode</p>
+        <p style="color: var(--accent-gold); font-size: 1rem; font-weight: 700;">Daily 10 AM – 10 PM</p>
+        <p style="color: #8D817B; font-size: 0.8rem; margin-top: 0.5rem;">5% GST Auto Computed</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Smart Café – Digi-Menu & Auto Billing Machine</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>
